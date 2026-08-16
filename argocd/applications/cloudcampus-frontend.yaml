@@ -8,7 +8,7 @@ spec:
   project: default
 
   source:
-    repoURL: git@github.com:pagotiramarao/cloudcampus-platform-gitops.git
+    repoURL: https://github.com/pagotiramarao/cloudcampus-platform-gitops.git
     targetRevision: main
     path: helm/frontend
 
