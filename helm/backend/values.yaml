@@ -2,13 +2,21 @@ replicaCount: 2
 
 image:
   repository: 938379788459.dkr.ecr.us-west-2.amazonaws.com/dev-backend
-  tag: "7-663759f"
+  tag: "8-e5f5776"
   pullPolicy: IfNotPresent
 
 service:
   type: ClusterIP
   port: 8080
   targetPort: 8080
+
+database:
+  host: dev-cloudcampus-postgres.cvw2qqgkq5yb.us-west-2.rds.amazonaws.com
+  port: 5432
+  name: cloudcampus
+
+secret:
+  name: cloudcampus-backend-db
 
 resources:
   requests:
