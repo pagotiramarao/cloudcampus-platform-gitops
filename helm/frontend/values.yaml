@@ -22,3 +22,9 @@ containerPort: 80
 
 health:
   path: /
+
+ingress:
+  enabled: true
+  scheme: internet-facing
+  targetType: ip
+  healthcheckPath: /
