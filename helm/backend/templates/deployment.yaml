@@ -16,6 +16,8 @@ spec:
     metadata:
       labels:
         {{- include "cloudcampus-backend.selectorLabels" . | nindent 8 }}
+      annotations:
+        argocd.argoproj.io/sync-wave: "1"
 
     spec:
       containers:
