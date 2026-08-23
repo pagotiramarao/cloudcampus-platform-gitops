@@ -37,15 +37,3 @@ probes:
     initialDelaySeconds: 30
     periodSeconds: 20
 
-ingress:
-  enabled: true
-  className: alb
-  host: api.mybanking.shop
-
-  annotations:
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
-    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:us-west-2:938379788459:certificate/d35ebdde-dbbf-4b45-96c0-fcba72f11fbe"
-    alb.ingress.kubernetes.io/ssl-redirect: "443"
-    alb.ingress.kubernetes.io/healthcheck-path: /actuator/health
