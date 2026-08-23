@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: 938379788459.dkr.ecr.us-west-2.amazonaws.com/dev-backend
-  tag: "13-db49121"
+  tag: "14-db49121"
   pullPolicy: IfNotPresent
 
 service:
