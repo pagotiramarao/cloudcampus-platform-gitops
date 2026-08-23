@@ -9,6 +9,16 @@ service:
   type: ClusterIP
   port: 8080
   targetPort: 8080
+ingress:
+  enabled: true
+  className: alb
+  host: api.mybanking.shop
+
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
+    alb.ingress.kubernetes.io/healthcheck-path: /actuator/health
 
 database:
   host: dev-cloudcampus-postgres.cvw2qqgkq5yb.us-west-2.rds.amazonaws.com
