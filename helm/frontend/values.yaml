@@ -1,8 +1,8 @@
 replicaCount: 2
 
 image:
-  repository: 938379788459.dkr.ecr.us-west-2.amazonaws.com/dev-frontend
-  tag: "15-8bc6864"
+  repository: 250224372179.dkr.ecr.us-west-2.amazonaws.com/dev-frontend
+  tag: "7-bb3e08c"
   pullPolicy: IfNotPresent
 
 service:
@@ -29,4 +29,4 @@ ingress:
   targetType: ip
   healthcheckPath: /
   host: mybanking.shop
-  certificateArn: "arn:aws:acm:us-west-2:938379788459:certificate/d35ebdde-dbbf-4b45-96c0-fcba72f11fbe"
+  certificateArn: "arn:aws:acm:us-west-2:250224372179:certificate/9fecdede-c86a-46ec-a7b2-dbf549eee0db"
